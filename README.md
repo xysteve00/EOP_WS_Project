@@ -1,28 +1,20 @@
-# OBFUSCATING TEXT RECOGNITION
+# Electrisity Output Prediction with Linear Regression and SARIMAX
 
- Modify the configurations in .json config files, get base model (eg. BASEMODEL_CHECKPOINT) ready then run:
+Note: read data from data folder and all generated figures are saved in figures/
 
-1. Train base model and evaluation.
+1. Linear Regression Model.
 
-   a. Train
-   <!-- ```shell
-   python train.py -c configs/config.json
-   ``` -->
+   a. Linear Regression + L2 norm Model
    ```shell
-   python run.py -m train -c experiments/Synth90k_MASTER_Cloak/config.json
+   python reg_l2.py 
    ```
 
-   b. Eval
+   b. XGBoost Model
    ```shell
-   python test.py --checkpoint BASEMODEL_CHECKPOINT \
-   --img_folder TEST_IMG_PATH \
-   --width 160 --height 48 \
-   --output_folder OUTPUT_FOLDER \
-   --batch_size 64
+   python xgb.py
    ```
 
-2. Train noise model from base neural network model.
+2. SARIMAX Model.
 ```
-python train_noise_model.py -c configs/config_1.json  -dist false  -m BASEMODEL_CHECKPOINT
-
+python sarimax_e_w.py
 ```
