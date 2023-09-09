@@ -144,6 +144,8 @@ def main():
     print(f'final prediction:\n{y_hat_test_all}')
     fig = sns_plot.get_figure()
     fig.savefig("figures/xgb_test.png")
+
+    
 if __name__ == "__main__":
     main()
 
