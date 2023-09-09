@@ -1,6 +1,6 @@
 """
     Script for electrisity production prediction 
-    with linear regression model(L2 regularization) on wind speed data (train/validate/test).
+    with XGBoost model on wind speed data (train/validate/test).
     author: Xiaoyu Zhang
     date: 09/08/2023
 """
